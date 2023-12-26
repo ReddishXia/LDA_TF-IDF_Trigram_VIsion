@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<div id="artplot-container" style="width: 500px; height: 300px; overflow: auto;">
+  <!-- Your SVG element (artplot) will be appended here -->
+</div>
+
+</body>
+</html>
+<script type="text/javascript">
+// Assuming you already have an svg element defined
+var svg = d3.select("your-svg-selector");
+
+// Append the container div and set its size and overflow properties
+var container = d3.select("#artplot-container")
+  .style("width", "500px")
+  .style("height", "300px")
+  .style("overflow", "auto");
+
+// Append the SVG element (artplot) to the container
+var artplot = container.append("svg")
+  .attr("width", "100%") // Set the width to 100% to fit the container
+  .attr("height", "100%") // Set the height to 100% to fit the container
+  .append("g")
+  .attr("id", "article")
+  .attr("class", "points")
+  .attr("transform", "translate(" + margin.left + "," + 2 * margin.top + ")");
+
+</script>
